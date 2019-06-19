@@ -1,7 +1,7 @@
 package personalassistant
 
 import (
-  "database/sql"
+  // "database/sql"
   "fmt"
   "log"
   "net/http"
@@ -12,7 +12,7 @@ import (
   // A HTTP Web framework
   "github.com/gin-gonic/gin"
   _ "github.com/heroku/x/hmetrics/onload"  
-  _ "github.com/lib/pq"
+  // _ "github.com/lib/pq"
 )
 
 var (
