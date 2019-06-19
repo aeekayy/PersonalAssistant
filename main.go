@@ -8,7 +8,7 @@ import (
   "os"
   
   // Google's UUID type
-  "code.google.com/p/go-uuid/uuid"
+  "github.com/pborman/uuid"
   // A HTTP Web framework
   "github.com/gin-gonic/gin"
   _ "github.com/heroku/x/hmetrics/onload"  
