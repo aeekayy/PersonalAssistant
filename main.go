@@ -1,7 +1,7 @@
 package personalassistant
 
 import (
-  // "database/sql"
+  "database/sql"
   "fmt"
   "log"
   "net/http"
@@ -12,7 +12,7 @@ import (
   // A HTTP Web framework
   "github.com/gin-gonic/gin"
   _ "github.com/heroku/x/hmetrics/onload"  
-  // _ "github.com/lib/pq"
+  _ "github.com/lib/pq"
 )
 
 var (
@@ -42,6 +42,12 @@ func main() {
   if port == "" {
     log.Fatal("$PORT must be set")
   }
+
+  db, err := sql.Open("postgres", psqlInfo)
+  if err != nil {
+    log.Fatal(err)
+  }
+  defer db.Close()
 
   router := gin.New()
   router.Use(gin.Logger())
