@@ -1,0 +1,7 @@
+{
+  "heroku": {
+    "goVersion": "go1.12.4"
+  },
+  "rootPath": "github.com/aeekayy/personalassistant"
+}
+
