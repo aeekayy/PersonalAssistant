@@ -1,0 +1,12 @@
+{
+  "name": "Personal Assistant",
+  "description": "Multi-faceted Go Project to Get Started with Golang",
+  "keywords": [
+    "getting-started",
+    "go",
+    "machine-learning",
+    "postgresql"
+  ],
+  "website": "http://github.com/aeekayy/PersonalAssistant",
+  "repository": "http://github.com/aeekayy/PersonalAssistant"
+}

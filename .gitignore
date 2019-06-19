@@ -1,2 +1,8 @@
 # Ignore the database shell
 database.sh
+
+# Go Build Pack ignores
+.env
+.docker_build/
+bin/
+
