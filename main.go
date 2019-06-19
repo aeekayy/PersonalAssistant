@@ -7,18 +7,30 @@ import (
   "net/http"
   "os"
   
+  // Google's UUID type
+  "code.google.com/p/go-uuid/uuid"
+  // A HTTP Web framework
   "github.com/gin-gonic/gin"
   _ "github.com/heroku/x/hmetrics/onload"  
   _ "github.com/lib/pq"
 )
 
-const (
+var (
   host		= os.Getenv("PG_HOST")
   port		= os.Getenv("PG_PORT")
   user		= os.Getenv("PG_USER")
   password	= os.Getenv("PG_PASSWORD")
   dbname	= os.Getenv("PG_DBNAME")
 )
+
+// Represents a house model in the database
+type House struct {
+  ID			uuid.UUID
+  Address, City, State	string
+
+  CreatedAt string `db:"created_at"`
+  UpdatedAt string `db:"updated_at"`
+}
 
 func main() {
   psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+

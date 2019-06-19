@@ -1,3 +1,3 @@
 module github.com/aeekayy/personalassistant
 
-go 1.12
+go1.12.6
