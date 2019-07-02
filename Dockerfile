@@ -20,7 +20,7 @@ RUN CGO_ENABLED=0 GOOS=linxu GOARCH=amd64 godep save ./...
 RUN STACK=heroku-18 /tmp/buildpack/heroku/go/bin/compile /app /tmp/build_cache /tmp/env
 
 # Prepare final, minimal image
-FROM heroku/heroku:18
+FROM heroku/heroku:18-build
 
 COPY --from=build /app /app
 ENV HOME /app
