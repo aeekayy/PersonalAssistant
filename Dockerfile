@@ -13,6 +13,7 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go get -u github.com/pborman/uuid
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go get -u github.com/gin-gonic/gin
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go get -u github.com/heroku/x/hmetrics/onload
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go get -u github.com/lib/pq
+RUN CGO_ENABLED=0 GOOS=linxu GOARCH=amd64 godep save ./...
 
 
 #Execute Buildpack
