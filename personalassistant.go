@@ -44,6 +44,8 @@ func main() {
   }
 
   db, err := sql.Open("postgres", psqlInfo)
+  // add the tables
+  db.Query(`CREATE TABLE IF NOT EXISTS houses (id UUID PRIMARY KEY, address VARCHAR(256), city VARCHAR(64), state VARCHAR(64), zip VARCHAR(10), created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP, updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP)`)
   if err != nil {
     log.Fatal(err)
   }
