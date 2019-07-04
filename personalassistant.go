@@ -1,4 +1,4 @@
-package personalassistant
+package main
 
 import (
   "database/sql"
